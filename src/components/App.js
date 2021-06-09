@@ -4,13 +4,14 @@ import {
   Switch
 } from 'react-router-dom';
 
-import GlobalStyle from '../assets/styles/globals';
 import Header from './Header/Header';
 
 import HomePage from './HomePage';
 import PostShowPage from './PostShowPage/PostShowPage';
 import PostEditPage from './PostEditPage';
 import NewStoryPage from './NewStoryPage';
+
+import GlobalStyle from '../assets/styles/globals';
 
 export default function App() {
   return (
