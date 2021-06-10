@@ -10,7 +10,19 @@ export default function NewStoryPage() {
   const [isSaveButtonDisabled, setSaveButtonDisable] = useState(false);
   const history = useHistory();
 
-  function onPostSaveButtonClick() {}
+  function onPostSaveButtonClick() {
+    const contentPreview = content.substr(3,20); 
+    const body = {
+      id:0,
+      title: title,
+      coverUrl: coverUrl,
+      contentPreview: contentPreview,
+      content: content,
+      commentCount: 0
+    }
+    const promisse = axios.post("http://localhost:4000/posts",body);
+    promisse.then(history.push("/"));
+  }
 
   return (
     <PostManipulation
